@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carlos Freddy’s Fit</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: white;
+      color: #000;
+      display: flex;
+    }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin: 15px 0;
+    }
+    .main {
+      margin-left: 250px;
+      padding: 30px;
+      flex: 1;
+      min-height: 100vh;
+      background-color: #fff;
+    }
+    .form-section {
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Carlos Freddy’s Fit</h2>
+    <ul>
+      <li>Meal Planner</li>
+      <li>Actividades</li>
+      <li>Clientes</li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="form-section">
+      <h1>Calculadora de Macronutrientes</h1>
+      <label for="cliente">Cliente</label>
+      <input type="text" id="cliente" placeholder="Nombre del cliente">
+
+      <label for="edad">Edad</label>
+      <input type="number" id="edad" placeholder="Edad">
+
+      <label for="peso">Peso (kg)</label>
+      <input type="number" id="peso" placeholder="Peso en kg">
+
+      <label for="estatura">Estatura (cm)</label>
+      <input type="number" id="estatura" placeholder="Estatura en cm">
+
+      <label for="sexo">Sexo</label>
+      <select id="sexo">
+        <option>Masculino</option>
+        <option>Femenino</option>
+      </select>
+
+      <label for="actividad">Nivel de Actividad</label>
+      <select id="actividad">
+        <option>Sedentario (1.2x)</option>
+        <option>Ligera (1.375x)</option>
+        <option>Moderado (1.55x)</option>
+        <option>Muy activo (1.725x)</option>
+      </select>
+
+      <label for="meta">Meta</label>
+      <select id="meta">
+        <option>Subir</option>
+        <option>Bajar</option>
+        <option>Mantener</option>
+      </select>
+
+      <button onclick="siguientePaso()">Siguiente</button>
+    </div>
+  </div>
+
+  <script>
+    function siguientePaso() {
+      alert("Aquí iría el siguiente paso o navegación a la planificación.");
+    }
+  </script>
+</body>
+</html>
